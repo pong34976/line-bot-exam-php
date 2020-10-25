@@ -1,5 +1,7 @@
-<?php
+<?php // callback.php
+
 require "vendor/autoload.php";
+require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2bLPW2Xj95hxP/LqNAm7ewu70ybbL1dYEqAEjoapl5RBdfumPOuSCaB0A1Pq4bnpxfenJMP96ldhnNfPlnqqmvjPlVzjkRLtUmta/XRO7KqS5VzytSMc9sE2BLC/l7H8heCLMb58O53yZGUDnWij3AdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'c3afa3c398a7b2ca7560aa42b7723225';
 $idPush = 'pong34976'
