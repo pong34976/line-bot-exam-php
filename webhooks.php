@@ -48,4 +48,4 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-echo "OK1";
+echo "OK2";
