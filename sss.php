@@ -7,7 +7,7 @@ $access_token = '2bLPW2Xj95hxP/LqNAm7ewu70ybbL1dYEqAEjoapl5RBdfumPOuSCaB0A1Pq4bn
 
 // Get POST body content
 $content = file_get_contents('php://input');
-print_r($content);
+ 
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -45,7 +45,7 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
                       
-			echo $result . "xxxx\r\n";
+			echo $result . "\r\n";
 		}
 	}
 } 
