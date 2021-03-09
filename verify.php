@@ -33,7 +33,7 @@
      if($message == "ขอid"){
        $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "รกของคุณคือ ...";
+      $arrayPostData['messages'][0]['text'] = "idของคุณคือ ...";
         $arrayPostData['messages'][1]['type'] = "text";
       $arrayPostData['messages'][1]['text'] =  $idu;
       pushMsg($arrayHeader,$arrayPostData);
