@@ -2,6 +2,7 @@
   $access_token = '2bLPW2Xj95hxP/LqNAm7ewu70ybbL1dYEqAEjoapl5RBdfumPOuSCaB0A1Pq4bnpxfenJMP96ldhnNfPlnqqmvjPlVzjkRLtUmta/XRO7KqS5VzytSMc9sE2BLC/l7H8heCLMb58O53yZGUDnWij3AdB04t89/1O/w1cDnyilFU=';
 // รับค่าที่ส่งมา
 $content = file_get_contents('php://input');
+$events = json_decode($content="", true);
 // ข้อความที่ส่งกลับ มาจาก ข้อความที่ส่งมา
             // ร่วมกับ USER ID ของไลน์ที่เราต้องการใช้ในการตอบกลับ
             $messages = array(
