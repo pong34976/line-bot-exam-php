@@ -8,14 +8,14 @@
    //รับข้อความจากผู้ใช้
    $message = $arrayJson['events'][0]['message']['text'];
    //รับ id ของผู้ใช้
-   //$id = $arrayJson['events'][0]['source']['userId'];
+   $idu = $arrayJson['events'][0]['source']['userId'];
  $id = "U7ac026abcd6b6fff17e0a73ff6f4b70d";
    #ตัวอย่าง Message Type "Text + Sticker"
    if($message == ""){
        
        $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "กรุณาชำระก่อนวันที่ ".@$_GET["bb"]." \n <br> ขอบคุณครับ";
+      $arrayPostData['messages'][0]['text'] = "กรุณาชำระก่อนวันที่ ".@$_GET["bb"]." \n  ขอบคุณครับ";
       /*$arrayPostData['messages'][1]['type'] = "sticker";
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34"; */
@@ -30,7 +30,15 @@
       $arrayPostData['messages'][1]['stickerId'] = "34"; */
       pushMsg($arrayHeader,$arrayPostData);
    }
-   
+     if($message == "ขอid"){
+       $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "รกของคุณคือ \n ".$idu;
+      /*$arrayPostData['messages'][1]['type'] = "sticker";
+      $arrayPostData['messages'][1]['packageId'] = "2";
+      $arrayPostData['messages'][1]['stickerId'] = "34"; */
+      pushMsg($arrayHeader,$arrayPostData);
+   }
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
       $ch = curl_init();
