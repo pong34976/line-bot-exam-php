@@ -33,10 +33,9 @@
      if($message == "ขอid"){
        $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "รกของคุณคือ \n ".$idu;
-      /*$arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34"; */
+      $arrayPostData['messages'][0]['text'] = "รกของคุณคือ ...";
+        $arrayPostData['messages'][1]['type'] = "text";
+      $arrayPostData['messages'][1]['text'] =  $idu;
       pushMsg($arrayHeader,$arrayPostData);
    }
    function pushMsg($arrayHeader,$arrayPostData){
