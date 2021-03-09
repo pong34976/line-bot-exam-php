@@ -1,6 +1,6 @@
 <?php
 // Access Token
-$access_token = '2bLPW2Xj95hxP/LqNAm7ewu70ybbL1dYEqAEjoapl5RBdfumPOuSCaB0A1Pq4bnpxfenJMP96ldhnNfPlnqqmvjPlVzjkRLtUmta/XRO7KqS5VzytSMc9sE2BLC/l7H8heCLMb58O53yZGUDnWij3AdB04t89/1O/w1cDnyilFU=';
+$access_token = 'a40f6b9359e38362e37992cedc88e6f9';
 // รับค่าที่ส่งมา
 $content = file_get_contents('php://input');
 // แปลงเป็น JSON
