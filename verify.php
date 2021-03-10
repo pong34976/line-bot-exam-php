@@ -13,7 +13,7 @@
    #ตัวอย่าง Message Type "Text + Sticker"
    if($message == ""){
        
-       $arrayPostData['to'] = $id;
+       $arrayPostData['to'] =$idu;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "กรุณาชำระก่อนวันที่ ".@$_GET["bb"]." \n  ขอบคุณครับ";
       /*$arrayPostData['messages'][1]['type'] = "sticker";
@@ -22,7 +22,7 @@
       pushMsg($arrayHeader,$arrayPostData);
    }
   if($message == "ยอดเงิน"){
-       $arrayPostData['to'] = $id;
+       $arrayPostData['to'] = $idu;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ยอดเงินคงเหลือ 1 บาท";
       /*$arrayPostData['messages'][1]['type'] = "sticker";
@@ -31,7 +31,7 @@
       pushMsg($arrayHeader,$arrayPostData);
    }
      if($message == "ขอid"){
-       $arrayPostData['to'] = $id;
+       $arrayPostData['to'] = $idu;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "idของคุณคือ ...";
         $arrayPostData['messages'][1]['type'] = "text";
@@ -39,7 +39,7 @@
       pushMsg($arrayHeader,$arrayPostData);
    }
      if($message == "ขอurl"){
-       $arrayPostData['to'] = $id;
+       $arrayPostData['to'] = $idu;
       $arrayPostData['messages'][0]['type'] = "text";
  
         $arrayPostData['messages'][0]['type'] = "text";
