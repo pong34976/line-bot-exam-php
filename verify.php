@@ -43,7 +43,7 @@
       $arrayPostData['messages'][0]['type'] = "text";
  
         $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] =  "http://172.17.14.66/verify.php?id=".$idu;
+      $arrayPostData['messages'][0]['text'] =  "http://172.17.14.66/line.php?id=".$idu;
       pushMsg($arrayHeader,$arrayPostData);
    }
    function pushMsg($arrayHeader,$arrayPostData){
