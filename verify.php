@@ -38,6 +38,14 @@
       $arrayPostData['messages'][1]['text'] =  $idu;
       pushMsg($arrayHeader,$arrayPostData);
    }
+     if($message == "ขอurl"){
+       $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+ 
+        $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] =  "http://172.17.14.66/verify.php?id=".$idu;
+      pushMsg($arrayHeader,$arrayPostData);
+   }
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
       $ch = curl_init();
