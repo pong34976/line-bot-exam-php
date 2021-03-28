@@ -11,25 +11,8 @@
    $idu = $arrayJson['events'][0]['source']['userId'];
  $id = "U7ac026abcd6b6fff17e0a73ff6f4b70d";
    #ตัวอย่าง Message Type "Text + Sticker"
-   if($message == ""){
-       
-       $arrayPostData['to'] =$idu;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "กรุณาชำระก่อนวันที่ ".@$_GET["bb"]." \n  ขอบคุณครับ";
-      /*$arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34"; */
-      pushMsg($arrayHeader,$arrayPostData);
-   }
-  if($message == "ยอดเงิน"){
-       $arrayPostData['to'] = $idu;
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ยอดเงินคงเหลือ 1 บาท";
-      /*$arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34"; */
-      pushMsg($arrayHeader,$arrayPostData);
-   }
+
+
   if($message == "test"){
        $arrayPostData['to'] = $idu;
       $arrayPostData['messages'][0]['type'] = "text";
@@ -47,14 +30,7 @@
       $arrayPostData['messages'][1]['text'] =  $idu;
       pushMsg($arrayHeader,$arrayPostData);
    }
-     if($message == "ขอurl"){
-       $arrayPostData['to'] = $idu;
-      $arrayPostData['messages'][0]['type'] = "text";
- 
-        $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] =  "http://172.17.14.66/line.php?id=".$idu;
-      pushMsg($arrayHeader,$arrayPostData);
-   }
+
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
       $ch = curl_init();
